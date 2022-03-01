@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-  color: rgb(135, 135, 135);
+  color: #878787;
   margin-bottom: 0;
   font-size: 24px;
   font-weight: 100;
@@ -24,7 +24,7 @@ li {
   font-weight: 100;
   line-height: 19px;
 }
-li::first-letter {
+li:first-letter {
   text-transform: capitalize;
 }
 
@@ -35,7 +35,7 @@ li::first-letter {
 .weather-app {
   padding: 20px;
   border: 1px solid #dadde1;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .overview {
@@ -77,10 +77,10 @@ li::first-letter {
 .weather-forecast {
   margin-top: 20px;
   text-align: center;
+  color: #000;
 }
 .weather-forecast-date {
   font-size: 16px;
-  color: #000;
   opacity: 0.5;
 }
 
