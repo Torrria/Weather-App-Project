@@ -53,7 +53,7 @@ function displayForecast(response) {
                     <div class="weather-forecast-temperature">
                       <span class="weather-forecast-temperature-max">${Math.round(
                         forecastDay.temp.max
-                      )}°</span
+                      )}° | </span
                       ><span class="weather-forecast-temperature-min">${Math.round(
                         forecastDay.temp.min
                       )}°</span>
@@ -78,6 +78,7 @@ function displayTemperature(response) {
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
+  let feelLikeElement = document.querySelector("#feel-like");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
@@ -87,6 +88,7 @@ function displayTemperature(response) {
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
+  feelLikeElement.innerHTML = Math.round(response.data.main.feels_like);
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
