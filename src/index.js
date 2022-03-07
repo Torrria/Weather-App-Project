@@ -19,7 +19,7 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = days[date.getDay()];
-  return `Welcome! Your local time is ${day} ${hours}:${minutes}`;
+  return `Welcome! Today is ${day} ${hours}:${minutes}`;
 }
 
 function formatDay(timestamp) {
