@@ -19,7 +19,7 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = days[date.getDay()];
-  return `${day} ${hours}:${minutes}`;
+  return `Welcome! Your local time is ${day} ${hours}:${minutes}`;
 }
 
 function formatDay(timestamp) {
@@ -37,7 +37,7 @@ function displayForecast(response) {
 
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 4) {
+    if (index < 5) {
       forecastHTML =
         forecastHTML +
         `<div class="col-2">
