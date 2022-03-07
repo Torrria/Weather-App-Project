@@ -68,7 +68,7 @@ function displayForecast(response) {
 
 function getForecast(coordinates) {
   let apiKey = "7e52f346f8643505a8a4ef23b47645a8";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
 
   axios.get(apiUrl).then(displayForecast);
 }
@@ -102,7 +102,7 @@ function displayTemperature(response) {
 
 function search(city) {
   let apiKey = "7e52f346f8643505a8a4ef23b47645a8";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayTemperature);
 }
 
@@ -112,7 +112,9 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-function displayFahrenheitTemperature(event) {
+search("New York");
+
+/*function displayFahrenheitTemperature(event) {
   event.preventDefault();
   // remove the active class
   celsiusLink.classList.remove("active");
@@ -141,6 +143,4 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
-search("New York");
-
-getForecast();
+(when use this section, add this line in HTML <span class units>,  <a href="#" id="fahrenheit-link">°F</a> | <a href="#" id="celsius-link" class="active">°C</a> ) */
