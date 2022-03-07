@@ -99,3 +99,7 @@ li:first-letter {
 .weather-forecast-temperature-min {
   opacity: 0.5;
 }
+
+.open-source {
+  margin-top: 5px;
+}
