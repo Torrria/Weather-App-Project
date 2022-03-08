@@ -1,14 +1,25 @@
+function standardTime() {
+  let time = new Date();
+  let USTime = time.toLocaleString("en-US", {
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  });
+  console.log(USTime);
+}
+
 function formatDate(timestamp) {
   //calculate the date
   let date = new Date(timestamp);
-  let hours = date.getHours();
+  /*let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
   let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
-  }
+  }*/
+
   let days = [
     "Sunday",
     "Monday",
@@ -19,7 +30,8 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = days[date.getDay()];
-  return `Welcome! Today is ${day} ${hours}:${minutes}`;
+  let time = standardTime.getDate;
+  return `Welcome! Today is ${day} ${time}`;
 }
 
 function formatDay(timestamp) {
