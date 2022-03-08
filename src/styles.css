@@ -35,7 +35,7 @@ li:first-letter {
   max-height: 900px;
   margin: 30 auto;
   margin-top: 5%;
-  background-color: white;
+  background-color: #d4d8dc;
   box-shadow: 10px 5px 5px #ec6e4b;
 }
 .weather-app {
