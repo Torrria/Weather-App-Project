@@ -1,3 +1,4 @@
+// change military time to US standard time
 function standardTime() {
   let time = new Date();
   return time.toLocaleString("en-US", {
@@ -7,18 +8,9 @@ function standardTime() {
   });
 }
 
+//calculate the date and return with a string of date and time
 function formatDate(timestamp) {
-  //calculate the date
   let date = new Date(timestamp);
-  /*let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }*/
-
   let days = [
     "Sunday",
     "Monday",
