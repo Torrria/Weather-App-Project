@@ -35,8 +35,8 @@ li:first-letter {
   max-height: 900px;
   margin: 30 auto;
   margin-top: 5%;
-  background-color: #ddeedf;
-  box-shadow: 10px 5px 5px #f9c7cf;
+  background-color: #f5e3d2;
+  box-shadow: 8px 5px 5px #aee0b8;
 }
 .weather-app {
   padding: 20px;
