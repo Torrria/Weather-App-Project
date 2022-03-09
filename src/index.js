@@ -49,6 +49,7 @@ function displayForecast(response) {
 
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
+    forecastFTemp = forecastDay.temp.day;
     if (index < 5) {
       forecastHTML =
         forecastHTML +
@@ -123,8 +124,60 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
+//temperature measure
+// fahrenheit
+function changeUnitFah(event) {
+  event.preventDefault();
+  let units = document.querySelectorAll(".units");
+  units.forEach(function (unit) {
+    unit.innerHTML = "°F";
+  });
 
-function displayCelsiusTemperature(event) {
+  let feel = document.querySelector("#feel-like");
+  feelF = (feelsLike * 9) / 5 + 32;
+  feel.innerHTML = Math.round(feelF);
+
+  let tempMax = document.querySelector("#weatherForecastTemperatureMax");
+  tempMax.innerHTML = Math.round(forecastDay.temp.max);
+
+  let tempMin = document.querySelector("#weatherForecastTemperatureMin");
+  tempMin.innerHTML = Math.round(forecastDay.temp.min);
+
+  let forecastTemp = document.querySelector("#forecastTemp");
+  forecastTemp.innerHTML = Math.round(forecastFTemp);
+}
+
+let fMeasureButton = document.querySelector("#fButton");
+fMeasureButton.addEventListener("click", changeUnitFah);
+// imperial
+
+// celsius
+function changeUnitCel(event) {
+  event.preventDefault();
+  let units = document.querySelectorAll(".units");
+  units.forEach(function (unit) {
+    unit.innerHTML = "°C";
+  });
+
+  let feel = document.querySelector("#feel-like");
+  feelC = ((feelsLike - 32) * 5) / 9;
+  feel.innerHTML = Math.round(feelsLike);
+
+  let forecastTemp = document.querySelector("#forecastTemp");
+  let forecastCTemp = (forecastFTemp - 32 * 5) / 9;
+  forecastTemp.innerHTML = Math.round(forecastCTemp);
+}
+
+let cMeasureButton = document.querySelector("#cButton");
+cMeasureButton.addEventListener("click", changeUnitCel);
+// metric
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+search("New York");
+
+/* (on hold) function displayCelsiusTemperature(event) {
   event.preventDefault();
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
@@ -148,9 +201,7 @@ let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
+celsiusLink.addEventListener("click", displayCelsiusTemperature); 
 
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", handleSubmit);
-
-search("New York");
+when use this section, add this line between span under units, <a href="#" id="fahrenheit-link" class="active">°F</a> |
+                    <a href="#" id="celsius-link">°C</a>*/
