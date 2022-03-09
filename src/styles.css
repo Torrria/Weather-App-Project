@@ -55,7 +55,7 @@ li:first-letter {
   margin: 5px, 5px, 5px;
   padding: 1px 14px;
   background: transparent;
-  border: 1px solid #ec6e4b;
+  border: 2px solid #faab18;
   color: rgb(0, 0, 0);
   font-size: 15px;
   transition: all 300ms ease-in-out;
@@ -64,8 +64,8 @@ li:first-letter {
 }
 .button:hover {
   color: #0c084c;
-  background: #ec6e4b;
-  border: 1px solid #ec6e4b;
+  background: #faab18;
+  border: 2px solid #faab18;
 }
 
 .weather-temperature img {
