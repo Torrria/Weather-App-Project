@@ -1,11 +1,10 @@
 function standardTime() {
   let time = new Date();
-  let USTime = time.toLocaleString("en-US", {
+  return time.toLocaleString("en-US", {
     hour: "numeric",
     minute: "numeric",
     hour12: true,
   });
-  console.log(USTime);
 }
 
 function formatDate(timestamp) {
@@ -30,7 +29,7 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = days[date.getDay()];
-  let time = standardTime.getDate;
+  let time = standardTime();
   return `Welcome! Today is ${day} ${time}`;
 }
 // days for forecast
