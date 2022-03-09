@@ -51,6 +51,7 @@ li:first-letter {
 .button {
   border-radius: 3px;
   display: block;
+  margin-top: 1%;
   margin: 5px, 5px, 5px;
   padding: 1px 14px;
   background: transparent;
