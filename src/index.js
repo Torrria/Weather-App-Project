@@ -120,17 +120,19 @@ function handleSubmit(event) {
 // unit conversion
 function displayCelsiusTemperature(event) {
   event.preventDefault();
-  let units = document.querySelectorAll(".units");
-  units.innerHTML = "°C";
   let celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  let units = document.querySelector(".units");
+  units.innerHTML = "°C";
 }
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  let units = document.querySelector(".units");
+  units.innerHTML = "°F";
 }
 
 let fahrenheitTemperature = null;
