@@ -118,9 +118,8 @@ function handleSubmit(event) {
 // unit conversion
 function displayCelsiusTemperature(event) {
   event.preventDefault();
-  let units = document.querySelectorAll("#units");
-  units.forEach(function (unit) {
-    unit.innerHTML = "°C";
+  let units = document.querySelectorAll(".units");
+  units.innerHTML = "°C";
   let celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
@@ -128,9 +127,8 @@ function displayCelsiusTemperature(event) {
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let units = document.querySelectorAll("#units");
-  units.forEach(function (unit) {
-    unit.innerHTML = "°F";
+  let units = document.querySelectorAll(".units");
+  units.innerHTML = "°F";
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
